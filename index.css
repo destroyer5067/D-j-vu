@@ -64,7 +64,7 @@ html{
     opacity:0.7;
 }
 /*body*/
-.head1{
+.head1,.code1,.code2{
     font-family: 'Bebas Neue', cursive;
     color:grey;
     letter-spacing: 1.5px;
@@ -101,9 +101,10 @@ height: 172px;
     
    
     margin-top: 587px;
-    height: 441px;
+    height: 455px;
     background-color: #212432;
-    width:1511px;
+    width: 1519px;
+    margin-left: -8px;
     }
     .footend{
     display:flex;
@@ -235,13 +236,13 @@ margin-right: 428px;
         cursor:pointer;
     }
     .try{
-        
-    height: 241px;
-    display: flex;
-    position: absolute;
-    margin-top: 889px;
-    width: 1511px;
-    background-image: linear-gradient(-225deg,#2eb7ce,#4296cb);
+        height: 241px;
+        display: flex;
+        position: absolute;
+        margin-top: 1150px;
+        width: 1518px;
+        background-image: linear-gradient(-225deg,#2eb7ce,#4296cb);
+        margin-left: -8px;
     }
     .ele1{
     
@@ -270,8 +271,12 @@ margin-right: 428px;
         position: absolute;
         margin-top: 168px;
         margin-left: 254px;
-        letter-spacing: 1px;
-        
+      
+    }
+    .ele3 h3{
+        font-family: 'Bebas Neue', cursive;
+        letter-spacing: 2px;
+        color:whitesmoke;  
     }
     .b1{
         color:white;
@@ -287,7 +292,7 @@ margin-right: 428px;
     margin-left: 62px;
     cursor:pointer;
     }
-    .b1:hover{
+    .b1:hover,.check:hover{
         opacity:0.9;
     }
     .ul4{
@@ -338,14 +343,16 @@ height: 536px;
 height: 536px;
 }
 .check{
-    position: absolute;
-margin-top: 46px;
-margin-left: 690px;
-padding: 8px;
-width: 166px;
-border-radius: 5px;
-height: 45px;
-}
-.check:hover{
+    color:white;
+        margin-top: 73px;
+    border-radius: 3px;
+    letter-spacing: 1.5px;
+    width: 208px;
+    height: 50px;
+    font-size: 102%;
+    background-color: #212432;
+    border-color: transparent;
+    font-weight: 497;
+    margin-left: 636px;
     cursor:pointer;
 }
