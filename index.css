@@ -1,8 +1,10 @@
 
 /*raw*/
-
+html{
+    scroll-behavior: smooth;
+}
 .navbar{
-    border:3px solid red;
+    
     display:flex;
     height: 73px;
     
@@ -22,24 +24,23 @@
     margin-top:0px;
     margin-left:19px;
     line-height: 30px;
-   border:1px solid rgb(0, 128, 100);
+   border:1px solid #42ba96;
    border-radius: 8px;
-   background-color: rgb(0, 128, 100);
+   background-color: #42ba96;
    padding:5px;
-    font-family: 'Bebas Neue', cursive;
-    letter-spacing: 1.6px;
+    font-family: HKGroteskPro,serif;
     font-weight: 500;
 }
 .ul1 li a{
     color:white;
 }
-.ul1 li a:hover{
+.ul1 li:hover{
     opacity:0.8;
     
 }
 
 .left{
-    border:2px solid green;
+   
     width:37%;
     position:relative;
     margin-left:945px;
@@ -50,10 +51,17 @@
     
 }
 .right{
-    border:2px solid yellow;
+    background:url('logo/ayush.png');
     position: absolute;
-width: 213px;
-height: 68px;
+    width: 145px;
+    height: 62px;
+    margin-top: 5px;
+    margin-left: 13px;
+    
+}
+.right:hover{
+    cursor: pointer;
+    opacity:0.7;
 }
 /*body*/
 .head1{
@@ -164,15 +172,16 @@ height: 172px;
         display: flex;
     }
     .footupleft{
-        width: 165px;
-    height: 100px;
-    margin-top: 42px;
-    margin-left: 65px;
-    margin-right: 108px;
-    background:url('https://media.istockphoto.com/vectors/browser-coding-icon-vector-id539258667');
-    background-size: cover;
-   
-    cursor:pointer;
+        width: 180px;
+height: 78px;
+margin-top: 42px;
+margin-left: 65px;
+margin-right: 108px;
+background: url('logo/ayush.png');
+    background-size: auto;
+filter: invert();
+background-size: cover;
+cursor: pointer;
     
     }
     .footupleft:hover{
@@ -185,12 +194,12 @@ height: 172px;
     }
     .footleftxt{
         color: #a7aabb;
-    text-decoration: none;
-    font-family: Maison Neue,Helvetica Neue,Helvetica,Arial,Lucida Grande,sans-serif;
-    font-size: 80%;
-    margin-top: 147px;
-    margin-left: -251px;
-    margin-right: 428px;
+text-decoration: none;
+font-family: Maison Neue,Helvetica Neue,Helvetica,Arial,Lucida Grande,sans-serif;
+font-size: 126%;
+margin-top: 131px;
+margin-left: -297px;
+margin-right: 428px;
     }
     .footrightlist1{
     
@@ -230,7 +239,7 @@ height: 172px;
     height: 241px;
     display: flex;
     position: absolute;
-    margin-top: 346px;
+    margin-top: 889px;
     width: 1511px;
     background-image: linear-gradient(-225deg,#2eb7ce,#4296cb);
     }
@@ -281,3 +290,62 @@ height: 172px;
     .b1:hover{
         opacity:0.9;
     }
+    .ul4{
+        list-style-type: none;
+    }
+    .text{
+        border:1px solid red;
+        height:679px;
+
+    }
+    .text1{
+        border:1px solid green;
+        height: 539px;
+width: 47%;
+margin-top: 140px;
+margin-left: 24px;
+        
+    }
+    .text2{
+        border:1px solid yellow;
+        margin-top: -541px;
+width: 45%;
+margin-left: 803px;
+height: 537px;
+    }
+.code2{
+  
+    height: 79px;
+    width: 200px;
+    margin-left: 1047px;
+    position: absolute;
+    margin-top: 22px;
+}
+.code1{
+   
+    height: 79px;
+width: 200px;
+margin-left: 221px;
+position: absolute;
+margin-top: 22px;
+}
+#code_1{
+    width: 704px;
+height: 536px;
+}
+#code_2{
+    width: 675px;
+height: 536px;
+}
+.check{
+    position: absolute;
+margin-top: 46px;
+margin-left: 690px;
+padding: 8px;
+width: 166px;
+border-radius: 5px;
+height: 45px;
+}
+.check:hover{
+    cursor:pointer;
+}
