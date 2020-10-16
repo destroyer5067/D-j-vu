@@ -1,0 +1,57 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login/SignUp</title>
+    <style>
+        label{
+            display:block;
+            width:200px;
+            float: left;
+            text-align: right;
+            margin: 10px 5px;
+            clear:left;
+        }
+input,select,textarea{
+    margin: 10px 5px;
+    vertical-align: middle;
+}
+    </style>
+</head>
+<body>
+    <h2>Login</h2>
+    <form action="submit1.php" method="get">
+        <fieldset>
+            <legend>Login</legend>
+        <label for="5">Email:</label> 
+        <input type="email" name="email" autofocus required id="5"/>
+    <br/>:
+    <label for="6">Password:</label>
+    <input type="text" name="pass" required id="6"/>
+    <input type="submit" value="Send"/>
+</fieldset>
+</form>
+<a href="#4">Signup</a>
+    <h1 id="4">SignUp</h1>
+    <form action="submit2.php" method="get">
+        <fieldset>
+        <legend>SignUp</legend>
+        <label for="7">First Name:</label>
+        <input type="text" name="fname" required id="7"/>
+        <br/>
+        <label for="8">Last Name:</label>
+        <input type="text" name="lname" id="8"/>
+        <br/>
+        <label for="9">Email:</label>
+        <input type="email" name="email" required id="9"/>
+    <br/>
+        <label for="10">Phone No:</label>
+        <input type="number" name="num" id="10"/>
+        <br/>
+        <label for="11">Password:</label>
+    <input type="text" name="pass" required/>
+    <input type="submit" value="Send" id="11"/>
+</fieldset>
+</form>
+</body>
+</html>
