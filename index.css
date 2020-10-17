@@ -22,13 +22,13 @@ html{
 .ul1 li{
     float: left;
     margin-top:0px;
-    margin-left:19px;
+    margin-left:18px;
     line-height: 30px;
    border:1px solid #42ba96;
    border-radius: 8px;
    background-color: #42ba96;
    padding:5px;
-    font-family: HKGroteskPro,serif;
+    font-family: 'Handlee', cursive;
     font-weight: 500;
 }
 .ul1 li a{
@@ -43,7 +43,7 @@ html{
    
     width:37%;
     position:relative;
-    margin-left:945px;
+    margin-left:904px;
     display: flex;
 }
 .left a{
@@ -51,7 +51,7 @@ html{
     
 }
 .right{
-    background:url('logo/ayush.png');
+    background:url('logo/ay.png');
     position: absolute;
     width: 145px;
     height: 62px;
@@ -239,7 +239,7 @@ margin-right: 428px;
         height: 241px;
         display: flex;
         position: absolute;
-        margin-top: 1150px;
+        margin-top: 346px;
         width: 1518px;
         background-image: linear-gradient(-225deg,#2eb7ce,#4296cb);
         margin-left: -8px;
@@ -343,16 +343,84 @@ height: 536px;
 height: 536px;
 }
 .check{
-    color:white;
-        margin-top: 73px;
-    border-radius: 3px;
-    letter-spacing: 1.5px;
-    width: 208px;
-    height: 50px;
-    font-size: 102%;
-    background-color: #212432;
-    border-color: transparent;
-    font-weight: 497;
-    margin-left: 636px;
-    cursor:pointer;
+    color: white;
+margin-top: 147px;
+border-radius: 3px;
+letter-spacing: 1.5px;
+width: 208px;
+height: 50px;
+font-size: 102%;
+background-color: #212432;
+border-color: transparent;
+font-weight: 497;
+margin-left: 657px;
+cursor: pointer;
+position: absolute;
 }
+.file1{
+    position: absolute;
+margin-top: 37px;
+margin-left: 263px;
+color:grey;
+
+}
+.file2{
+
+    position: absolute;
+    margin-top: 37px;
+    margin-left: 1047px;
+    color:grey;
+}
+
+#custom-button {
+    padding: 10px;
+    color: white;
+    background-color: #009578;
+    border: 1px solid #000;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 251px;
+    margin-top: 33px;
+    width: 167px;
+    height: 47px;
+    font-family: 'Handlee', cursive;
+  }
+  
+  #custom-button:hover {
+    background-color: #00b28f;
+  }
+  
+  #custom-text {
+    margin-left: 10px;
+    font-family: sans-serif;
+    color: #aaa;
+    font-family: 'Handlee', cursive;
+  }
+  #custom-button2 {
+    padding: 10px;
+    color: white;
+    background-color: #009578;
+    border: 1px solid #000;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 1070px;
+    margin-top: -65px;
+    width: 167px;
+    height: 47px;
+    font-family: 'Handlee', cursive;
+  }
+  
+  #custom-button2:hover {
+    background-color: #00b28f;
+  }
+  
+  #custom-text2 {
+   
+    font-family: sans-serif;
+    color: #aaa;
+    font-family: 'Handlee', cursive;
+    margin-left: 15px;
+position: absolute;
+margin-top: -36px;
+  }
+  
