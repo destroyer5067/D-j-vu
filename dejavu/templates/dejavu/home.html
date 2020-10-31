@@ -1,0 +1,514 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
+    integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+    integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+  <link rel="stylesheet" type="text/css" href="{% static 'dejavu/main.css' %}">
+  <link href="https://fonts.googleapis.com/css2?family=Anton&family=Bebas+Neue&display=swap" rel="stylesheet">
+
+
+  {% load static %}
+  <script src="{% static 'dejavu/main.js' %}" type="text/javascript"></script>
+
+  <title>Our Website</title>
+</head>
+
+<body onload="myf()">
+  <header class="site-header">
+    <nav class="navbar navbar-expand-md navbar-dark bg-steel fixed-top">
+      <div class="container" id="navcontoid">
+        <a class="navbar-brand mr-4" href="{% url 'dejavu-home' %}">Deja-Vu</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle"
+          aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarToggle">
+          <div class="navbar-nav mr-auto">
+            <a class="nav-item nav-link" href="{% url 'dejavu-home' %}">Home</a>
+            <a class="nav-item nav-link" href="{% url 'dejavu-about' %}">About</a>
+          </div>
+          <!-- Navbar Right Side -->
+          <div class="navbar-nav">
+            {% if user.is_authenticated %}
+            <a class="nav-item nav-link" href="{% url 'profile' %}">Profile</a>
+            <a class="nav-item nav-link" href="{% url 'logout' %}">Logout</a>
+            {% else %}
+            <a class="nav-item nav-link" href="{% url 'login' %}">Login</a>
+            <a class="nav-item nav-link" href="{% url 'register' %}">Register</a>
+            {% endif %}
+          </div>
+
+        </div>
+      </div>
+    </nav>
+  </header>
+  <div class="full">
+    <div class="alert alert-primary alert-dismissible fade show " role="alert">
+      <strong>Hello interviewers!</strong> get your trickster's caught
+      <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+  </div>
+``
+  <!-- <h1 class="head1">
+    <center>PLAGIARISM CHECKER</center>
+  </h1> -->
+  <br /><br />
+  <div id="loading">
+
+  </div>
+  <div class="ti1">
+
+
+  </div>
+  <div class="ti2">
+
+  </div>
+  
+ <div class="typetxt">
+   <h4 id="tt">
+
+   </h4>
+   <p class="cb">
+
+   </p>
+ </div>
+  <div class="cbleft">
+    <ul class="check1">
+      <li>
+        <img src="media/logo/checkicon.jpg">
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        No Ads
+      </li>
+      <li>
+        <img src="media/logo/checkicon.jpg">
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        
+        Easy To Use
+      </li>
+      <li>
+        <img src="media/logo/checkicon.jpg">
+        &nbsp;&nbsp;&nbsp;&nbsp;
+         Data Safety
+      </li>
+    </ul>
+    <ul class="check2">
+      <li>
+        <img src="media/logo/checkicon.jpg">
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        Multiple Files Supportive
+      </li>
+      <li>
+        <img src="media/logo/checkicon.jpg">
+        &nbsp;&nbsp;&nbsp;&nbsp;
+        Download Report
+      </li>
+      <li>
+        <img src="media/logo/checkicon.jpg">
+        &nbsp;&nbsp;&nbsp;&nbsp;
+         Share Report
+      </li>
+    </ul>
+
+  </div>
+
+  
+  <div class="text">
+    <div class="code1">
+      <h5 style="color: white; font-size: 27px;">
+        <center>INPUT 1</center>
+      </h5>
+    </div>
+    <div class="code2">
+      <h5 style="color: white; font-size: 27px;">
+        <center>INPUT 2</center>
+      </h5>
+    </div>
+    <form action="\take" method="POST" enctype="multipart/form-data"> {%csrf_token %}
+      <div class="text1">
+        <textarea id="code_1" name="t1" field="text" rows="4" cols="50" >
+
+                </textarea>
+
+      </div>
+      <div class="text2">
+        <textarea id="code_2" name="t2" field="text" rows="4" cols="50" >
+
+                </textarea>
+
+
+      </div>
+
+
+
+
+
+      <div class="up1">
+        <input type="file" id="file1" name="f1" hidden="hidden">
+        <button type="button" id="b2">CHOOSE A FILE</button>
+        <span id="b2txt" name="i1">No file chosen, yet.</span></div>
+
+      <div class="up2">
+        <input type="file" id="file2" name="f2" hidden="hidden">
+        <button type="button" id="b3">CHOOSE A FILE</button>
+        <span id="b3txt" name="i2">No file chosen, yet.</span>
+      </div>
+      <div class="textforor">
+        <h5>
+          Check with our reference sites
+        </h5>
+      </div>
+      <div class="liNK">
+        <div class="custom-control custom-switch">
+          <input type="checkbox" class="custom-control-input" id="customSwitch1" name="x1" onclick="my1()">
+
+          <label class="custom-control-label " for="customSwitch1">GFG</label></div>
+          <div class="gfgimg">
+            <a href="https://www.geeksforgeeks.org/"><img src="https://media.geeksforgeeks.org/wp-content/uploads/20200326201748/download312.png" height="40px" width="40px"></a>
+          </div>
+
+        <div class="url1">
+          <input type="url" class="u1" id="u1" name="u1"  placeholder="Enter url">
+        </div>
+        <div class="custom-control custom-switch mt-4">
+
+          <input type="checkbox" class="custom-control-input" id="customSwitch2" name="x2" onclick="my2()">
+
+          <label class="custom-control-label " for="customSwitch2">MEDIUM</label></div>
+          <div class="medimg">
+            <a href="https://medium.com/"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn%3AANd9GcSiE6xix0S7OTbso3Lfu-q6NRmZnoFIYEXEvg&usqp=CAU" height="40px" width="40px"></a>
+          </div>
+
+        <div class="url2">
+          <input type="text" class="u2" id="u2" name="u2"  placeholder="Enter url">
+        </div>
+      </div>
+      <input type="submit" value="Check Score" class="check" />
+    </form>
+  </div>
+  <div class="gif">
+    
+  </div>
+  
+  <div class="cards">
+    <div class="card-group">
+      <div class="card">
+        <img src="https://www.flaticon.com/premium-icon/icons/svg/1627/1627373.svg" class="card-img-top"  >
+        <div class="card-body">
+          <h5 class="card-title">Stop Plagiarism</h5>
+          <p class="card-text">comes from the same root word as "kidnap". Whether you take someone's work intentionally or unintentionally and claim it as your own, you are <strong>plagiarizing</strong></p>
+          <p class="card-text"><small class="text-muted">Try us and remain plag free!!</small></p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://image.freepik.com/free-vector/plagiarism-concept-having-idea-stolen_23-2148704330.jpg" class="card-img-top" >
+        <div class="card-body">
+          <h5 class="card-title">Use Reference sites</h5>
+          <p class="card-text">Provide us a link and we will check your text/code for plagiarism in our reference sites.
+            Make sure you try this feature.  <strong>Remain plag free!!</strong>
+          </p>
+          <p class="card-text"><small class="text-muted">GFG    MEDIUM</small></p>
+        </div>
+      </div>
+      <div class="card">
+        <img src="https://image.freepik.com/free-vector/young-anonymous-hacker-with-flat-design_23-2147887331.jpg" class="card-img-top" >
+        <div class="card-body">
+          <h5 class="card-title">Membership Plan</h5>
+          <p class="card-text">Try our weekly and monthly memebership plan for <strong>$8</strong> and <strong>$29</strong> respectively.
+          Get extended features and totally plag free environmnet.</p>
+          <p class="card-text"><small class="text-muted">Try Us</small></p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="try">
+    <div class="ele1">
+      <h2>
+        <center>
+          Try us today....</center>
+      </h2>
+    </div>
+    <div class="ele2">
+      <center>
+        <button class="b1">
+          GET STARTED
+        </button></center>
+    </div>
+    <div class="ele3">
+      <h5>
+        <center>
+          Ready to stop wasting time with that old school "plagiarism checker" from the 90's, Start using us today for
+          free...
+        </center>
+      </h5>
+
+    </div>
+  </div>
+  <div class="foot" id="Foot">
+    <div class="footup">
+      <div class="footupleft">
+        <img src="media/logo/ayush.png">
+      </div>
+
+      <p class="footleftxt">Plagiarism</p>
+      <div class="footupright">
+        <div class="footrightlist1">
+          <ul class="list1right">
+            <li><a href="" id="1">
+                ABOUT US</a>
+            </li>
+            <li><a href="{% url 'dejavu-about' %}">
+                Plagiarism Detector</a>
+            </li>
+            <li><a href="https://avishkar.mnnit.ac.in/events/sub_events/electromania/" target="_blank">
+                Innodev-Déjà vu</a>
+            </li>
+            <li><a href="https://mnnit.ac.in/" target="_blank">
+                MNNIT </a>
+            </li>
+
+
+          </ul>
+
+        </div>
+        <div class="footrightlist2">
+          <ul class="list1right">
+            <li><a href="" id="2">
+                MEMBERS</a>
+            </li>
+            <li><a href="mailto:ayush.20195078@mnnit.ac.in"> Ayush Kanodia (ECE)</a>
+            </li>
+            <li>
+
+              <a href="mailto:naman.20196036@mnnit.ac.in">Naman Gupta (PIE)</a>
+            </li>
+            <li><a href="mailto:satyam.20195067@mnnit.ac.in">
+                Satyam Raj (ECE)</a>
+            </li>
+
+          </ul>
+        </div>
+        <div class="footrightlist3">
+          <ul class="list1right">
+            <li><a href="">
+                CONNECT</a>
+            </li>
+            <li><a href="https://github.com/Ayushkanodia11/D-j-vu.git" target="_blank">
+                Github</a>
+            </li>
+            <li><a href="https://www.facebook.com/avishkar.electromania/" target="_blank">
+                Facebook</a>
+            </li>
+            <li><a href="" id="3">
+                Refrence sites</a>
+              <ul class="ul4">
+                <li><a href="https://www.geeksforgeeks.org/" target="_blank">GFG</a></li>
+                <li><a href="https://medium.com/" target="_blank">MEDIUM</a></li>
+              </ul>
+          </ul>
+
+        </div>
+
+      </div>
+
+    </div>
+    <hr>
+    <div class="footend">
+      <div class="cont1">
+        <ul class="ul2">
+          <li>
+            <a href="">Copyrights@ DEJAVU</a>
+          </li>
+          <li>
+            <a href="">Terms and conditions</a>
+          </li>
+          <li>
+            <a href="">Privacy policy</a>
+          </li>
+        </ul>
+
+      </div>
+      <div class="cont2">
+        <ul class="ul3">
+          <li class="fb">
+            <a href="https://www.facebook.com/">
+              <img src="media/logo/fb.png">
+
+            </a>
+          </li>
+          <li class="youtube">
+            <a href="">
+              <img src="media/logo/youtube.png">
+
+            </a>
+          </li>
+          <li class="insta">
+            <a href="">
+              <img src="media/logo/insta3.png">
+
+            </a>
+          </li>
+          <li class="twitter">
+            <a href="">
+              <img src="media/logo/twitter.png"> </a>
+          </li>
+        </ul>
+
+      </div>
+    </div>
+  </div>
+
+  <script type="text/javascript">
+
+  /*//////////////////////////////////*/
+
+
+
+  var preloader=document.getElementById('loading');
+   function myf(){
+    preloader.style.display= 'none';
+  }
+
+
+  
+
+
+/*/////////////////////////////////////////////////*/
+var i = 0;
+var txt = ' We here present DEJAVU, a plagiarism checking website for your tests.Welcome to DEJAVU!!'; /* The text */
+var speed = 100; /* The speed/duration of the effect in milliseconds */
+
+window.setInterval( function typeWriter() {
+ 
+ 
+  if (i 
+  < txt.length) {
+    document.getElementById("tt").innerHTML += txt.charAt(i);
+    i++;
+    setTimeout(typeWriter, speed);
+  }
+
+
+},1000);
+/*/////////////////////////////////////////////////*/
+    
+    var p = 1;
+    var q = 1;
+    function my1() {
+      p++;
+      if (p % 2 != 0)
+        document.getElementById('u1').disabled = true;
+      else
+        document.getElementById('u1').disabled = false;
+    }
+    function my2() {
+      q++;
+      if (q % 2 != 0)
+        document.getElementById('u2').disabled = true;
+      else
+        document.getElementById('u2').disabled = false;
+    }
+    /*////////////////////////////////////////*/
+    const realFileBtn = document.getElementById("file1");
+    const customBtn = document.getElementById("b2");
+    const customTxt = document.getElementById("b2txt");
+    const realFileBtn2 = document.getElementById("file2");
+    const customBtn2 = document.getElementById("b3");
+    const customTxt2 = document.getElementById("b3txt");
+
+    customBtn.addEventListener("click", function () {
+      realFileBtn.click();
+    });
+
+    realFileBtn.addEventListener("change", function () {
+      if (realFileBtn.value) {
+        customTxt.innerHTML = realFileBtn.value.match(
+          /[\/\\]([\w\d\s\.\-\(\)]+)$/
+        )[1];
+      } else {
+        customTxt.innerHTML = "No file chosen, yet.";
+      }
+    });
+
+
+    customBtn2.addEventListener("click", function () {
+      realFileBtn2.click();
+    });
+
+    realFileBtn2.addEventListener("change", function () {
+      if (realFileBtn2.value) {
+        customTxt2.innerHTML = realFileBtn2.value.match(
+          /[\/\\]([\w\d\s\.\-\(\)]+)$/
+        )[1];
+      } else {
+        customTxt2.innerHTML = "No file chosen, yet.";
+      }
+    });
+
+  </script>
+
+
+
+
+  <!--
+  <main role="main" class="container">
+    <div class="row">
+      <div class="col-md-8">
+        {% if messages %}
+          {% for message in messages %}
+            <div class="alert alert-{{ message.tags }}">
+              {{ message }}
+            </div>
+          {% endfor %}
+        {% endif %}
+        
+      </div>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+     
+      <script src="/static/js/bootstrap.min.js"></script>
+
+      <div class="col-md-4">
+        <div class="content-section">
+          <h3>Our Sidebar</h3>
+          <p class='text-muted'>You can put any information here you'd like.
+            <ul class="list-group">
+
+              <li class="list-group-item list-group-item-light">References</li>
+              <li class="list-group-item list-group-item-light">Announcements</li>
+              <li class="list-group-item list-group-item-light">Contacts</li>
+             
+            </ul>
+          </p>
+        </div>
+      </div>
+    </div>
+  </main>
+-->
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"
+    integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"
+    integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

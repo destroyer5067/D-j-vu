@@ -1,0 +1,391 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8"/>
+
+  <!-- bootstrap cdn -->
+  <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"/>
+  <!-- font awesome cdn -->
+  <link rel="stylesheet" type="text/css" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+  <!-- style.css -->
+  <link rel="stylesheet" type="text/css" href="{% static 'dejavu/main.css' %}"/>
+  <!-- jquery cdn -->
+  <style>
+   /* .carousel{
+
+   } */
+  </style>
+
+    {% load static %}  
+    <script src="{% static 'dejavu/main.js' %}" type="text/javascript"></script>  
+  
+  <script type="text/javascript" src="https://code.jquery.com/jquery-3.4.1.js"></script>
+</head>
+<body >
+  <header class="site-header">
+    <nav class="navbar navbar-expand-md navbar-dark bg-steel fixed-top">
+      <div class="container">
+        <a class="navbar-brand mr-4" href="{% url 'dejavu-home' %}">Deja-Vu</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggle" aria-controls="navbarToggle" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarToggle">
+          <div class="navbar-nav mr-auto">
+            <a class="nav-item nav-link" href="{% url 'dejavu-home' %}">Home</a>
+            <a class="nav-item nav-link" href="{% url 'dejavu-about' %}">About</a>
+          </div>
+          <!-- Navbar Right Side -->
+          <div class="navbar-nav">
+            {% if user.is_authenticated %}
+              <a class="nav-item nav-link" href="{% url 'profile' %}">Profile</a> 
+              <a class="nav-item nav-link" href="{% url 'history' %}">History</a> 
+              <a class="nav-item nav-link" href="{% url 'logout' %}">Logout</a>
+
+            {% else %}
+              <a class="nav-item nav-link" href="{% url 'login' %}">Login</a>
+              <a class="nav-item nav-link" href="{% url 'register' %}">Register</a>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+    </nav>
+  </header>
+  <div class="full">
+  <div class="alert alert-secondary alert-dismissible fade show " role="alert">
+    <strong>Hello friends!!</strong> register yourself for this seamless experience
+    <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+      <span aria-hidden="true">&times;</span>
+    </button>
+  </div>
+  </div>
+
+   <h1 class="head1">
+        <center>PLAGIARISM CHECKER</center>
+    </h1>
+    <br /><br />
+   
+    
+  <div class="container-fluid" >
+    <div class="row">
+      
+      <!-- slider banner   -->
+
+      <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+          <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+          <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
+          <div class="carousel-item active" >
+            <div class="info">
+                <div class="item active" id="c1">
+                  <img src="/media/carousal/p1.jpg" class="carousel">
+                  
+                </div>
+             
+              </div>
+          </div>
+          <div class="carousel-item">
+            <div class="info">
+                  <div class="item active" >
+                  <img src="/media/carousal/p2.jpg" style="display: block;margin-left: auto;margin-right: auto;width:100%;">
+                    
+                  </div>
+               
+              </div>
+          </div>
+          <div class="carousel-item">
+            <div class="info">
+                <div class="item active" id="c3">
+                  
+                  <img src="/media/carousal/p3.jpg" style="display: block;margin-left: auto;margin-right: auto;width:100%;">
+                     
+                </div>
+                
+              </div>
+          </div>
+        </div>
+        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="sr-only">Previous</span>
+        </a>
+        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="sr-only">Next</span>
+        </a>
+      </div>
+
+
+    </div>
+  </div>
+ 
+  <div class="coupon">
+    <div class="container">
+      <h3></h3>
+    </div>
+    <img src="/media/carousal/p6.jpg" alt="Avatar" style="display: block;margin-left: auto;margin-right: auto;width:78%;padding: 2px 16px;">
+    <div class="container" style="background-color:grey">
+      <h2><b>SAY NO TO PLAGIARISM!</b></h2>
+      <p>
+        Today, piracy has become a constant issue in educational institutions as students create many assignments using a large amount of research in a small amount of time. Many schools/institutions like MNNIT, have bodies like Office of Judicial affair that will go through every case of plagiarism and settle a punishment. Plagiarism is embarrassing for the student and will have his future assignments scrutinized more closely than all other students. Hence, confirming at least once from free plagiarism checker is a safer approach. Umpteen journalists, academics, writers, and creators have had their professional along with personal reputations ruined over accusations of replicating material. Not only plagiarist get their on-going work halted by being dismissed or by having contracts abolished, but they also can find it hard to get any future work. A specific memorable or worse episode of plagiarism can totally devastate a person's image and force him or her to change careers just to avoid the stigma of duplication.
+      </p>
+    </div>
+  </div> 
+
+   <div class="coupon">
+    <div class="container">
+      <h3></h3>
+    </div>
+    <img src="/media/carousal/p4.jpg" alt="Avatar" style="display: block;margin-left: auto;margin-right: auto;width:78%;padding: 2px 16px;">
+    <div class="container" style="background-color:grey">
+      <h2><b>WHY TO SAY NO TO PLAGIARISM!</b></h2>
+      <p>
+        Other than all the professional and personal hardships that may generate, in specific cases, there are legal consequences too. The copying of copyrighted material for profit can result in the plagiarist having to pay some monetary damages, for ill-gained profits and for any potential losses that replicating might have caused the original creator. In some instances, duplicating data can even cause the plagiarist having to go through some criminal prosecution where the punishment can range from charges to imprisonment. “The Impact of Social Media on Plagiarism”
+
+        Therefore, once utilizing plagiarism detector free before submitting any content, to see whether you have copied content or not is an approach which can keep you far away from any of the ramifications cited. By using the tool, we also do not have to wait for an extended period for the results, so the opportunity cost of its usage is also not a high one. You can avail all these advantages and save yourself for free.
+      </p>
+    </div>
+  </div> 
+
+   <div class="coupon">
+    <div class="container">
+      <h3></h3>
+    </div>
+    <img src="/media/carousal/p5.jpeg" alt="Avatar" style="display: block;margin-left: auto;margin-right: auto;width:78%;padding: 2px 16px;">
+    <div class="container" style="background-color:grey">
+      <h2><b>TRY US!</b></h2>
+      <p>
+        Plagiarism Detector is the free and an intelligent and essay checker software. It doesn't matter if you are a student or a professional, everyone can have benefit from this likewise.
+
+        Now, with the help of our plagiarism detector, you can check if your content that you are just seconds away from publishing and considering its uniqueness. If you are web owner, then it is very important to have a plagiarism-free content on your website if you wish to attract maximum traffic. This is the best Free Plagiarism Checker that you will find online as it works the same way as Google.
+
+        Built with thorough research on the needs of our customers, all the essential strategies and techniques have been implemented to make results 100% accurate and authentic for everyone.
+      </p>  
+    </div>
+  </div> 
+  <!-- scripts -->
+  <!-- bootstrap javascript cdn -->
+  <script type="text/javascript" src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+
+
+
+    <div class="try">
+      <div class="ele1">
+          <h2 ><center>
+            Try us today....</center>
+          </h2>
+      </div>
+      <div class="ele2"><center>
+              <button class="b1">
+                  GET STARTED 
+              </button></center>
+      </div>
+      <div class="ele3">
+          <h5>
+          <center>
+              Ready to stop wasting time with that old school "plagiarism checker" from the 90's, Start using us today for free...
+          </center></h5>
+
+      </div>
+  </div>  
+      <div class="foot" id="Foot">
+        <div class="footup">
+            <div class="footupleft">
+          <img src="/media/logo/ayush.png">
+            </div>
+            
+            <p class="footleftxt">Plagiarism</p>
+            <div class="footupright">
+                <div class="footrightlist1">
+                    <ul class="list1right">
+                       <li><a href="" id="1">
+                        ABOUT US</a>
+                       </li>
+                       <li><a href="{% url 'dejavu-about' %}">
+                        Plagiarism Detector</a>
+                    </li>
+                       <li><a href="https://avishkar.mnnit.ac.in/events/sub_events/electromania/" target="_blank">
+                        Innodev-Déjà vu</a>
+                    </li>
+                    <li><a href="https://mnnit.ac.in/" target="_blank">
+                        MNNIT </a>
+                    </li>
+                    
+                   
+                    </ul>
+
+                </div>
+                <div class="footrightlist2">
+                    <ul class="list1right">
+                        <li><a href="" id="2">
+                         MEMBERS</a>
+                        </li>
+                        <li><a href="mailto:ayush.20195078@mnnit.ac.in"> Ayush Kanodia (ECE)</a>
+                        </li>
+                     <li>
+                      
+                         <a href="mailto:naman.20196036@mnnit.ac.in">Naman Gupta (PIE)</a>
+                     </li>
+                     <li><a href="mailto:satyam.20195067@mnnit.ac.in">
+                        Satyam Raj (ECE)</a>
+                     </li>
+                     
+                     </ul>
+                </div>
+                <div class="footrightlist3">
+                    <ul class="list1right">
+                        <li><a href="">
+                         CONNECT</a>
+                        </li>
+                     <li><a href="https://github.com/Ayushkanodia11/D-j-vu.git" target="_blank">
+                        Github</a>
+                     </li>
+                     <li><a href="https://www.facebook.com/avishkar.electromania/" target="_blank">
+                       Facebook</a>
+                    </li>
+                    <li><a href="" id="3">
+                        Refrence sites</a>
+                        <ul class="ul4">
+                            <li><a href="https://www.geeksforgeeks.org/" target="_blank">GFG</a></li>
+                            <li><a href="https://medium.com/" target="_blank">MEDIUM</a></li>
+                        </ul>
+                     </ul>
+
+                </div>
+
+            </div>
+            
+        </div>
+       <hr>
+        <div class="footend"> 
+            <div class="cont1">
+             <ul class="ul2">
+                 <li >
+                     <a href="">Copyrights@ DEJAVU</a>
+                 </li>
+                 <li >
+                    <a href="">Terms and conditions</a>
+                </li>
+                <li >
+                    <a href="">Privacy policy</a>
+                </li>
+             </ul>
+            
+            </div>
+            <div class="cont2">
+                <ul class="ul3">
+                    <li class="fb">
+                        <a href="https://www.facebook.com/">
+                            <img src="/media/logo/fb.png">
+
+                        </a>
+                    </li>
+                    <li class="youtube">
+                        <a href="">
+                            <img src="/media/logo/youtube.png">
+                            
+                        </a>
+                    </li>
+                    <li class="insta">
+                        <a href="">
+                            <img src="/media/logo/insta3.png">
+                            
+                        </a>
+                    </li>
+                    <li class="twitter"> 
+                        <a href="">
+                            <img src="/media/logo/twitter.png"> </a>
+                    </li>
+                     </ul>
+
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+  const realFileBtn = document.getElementById("file1");
+const customBtn = document.getElementById("b2");
+const customTxt = document.getElementById("b2txt");
+const realFileBtn2 = document.getElementById("file2");
+const customBtn2 = document.getElementById("b3");
+const customTxt2 = document.getElementById("b3txt");
+
+customBtn.addEventListener("click", function() {
+  realFileBtn.click();
+});
+
+realFileBtn.addEventListener("change", function() {
+  if (realFileBtn.value) {
+    customTxt.innerHTML = realFileBtn.value.match(
+      /[\/\\]([\w\d\s\.\-\(\)]+)$/
+    )[1];
+  } else {
+    customTxt.innerHTML = "No file chosen, yet.";
+  }
+});
+
+
+customBtn2.addEventListener("click", function() {
+  realFileBtn2.click();
+});
+
+realFileBtn2.addEventListener("change", function() {
+  if (realFileBtn2.value) {
+    customTxt2.innerHTML = realFileBtn2.value.match(
+      /[\/\\]([\w\d\s\.\-\(\)]+)$/
+    )[1];
+  } else {
+    customTxt2.innerHTML = "No file chosen, yet.";
+  }
+});
+
+    </script>
+
+
+
+  <!--
+  <main role="main" class="container">
+    <div class="row">
+      <div class="col-md-8">
+        {% if messages %}
+          {% for message in messages %}
+            <div class="alert alert-{{ message.tags }}">
+              {{ message }}
+            </div>
+          {% endfor %}
+        {% endif %}
+        
+      </div>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+     
+      <script src="/static/js/bootstrap.min.js"></script>
+
+      <div class="col-md-4">
+        <div class="content-section">
+          <h3>Our Sidebar</h3>
+          <p class='text-muted'>You can put any information here you'd like.
+            <ul class="list-group">
+
+              <li class="list-group-item list-group-item-light">References</li>
+              <li class="list-group-item list-group-item-light">Announcements</li>
+              <li class="list-group-item list-group-item-light">Contacts</li>
+             
+            </ul>
+          </p>
+        </div>
+      </div>
+    </div>
+  </main>
+-->
+
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+
+</html>

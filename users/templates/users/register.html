@@ -1,0 +1,73 @@
+{% extends "dejavu/base.html" %}
+{% load crispy_forms_tags %}
+{% block content %}
+<style>
+ .i1{
+    position: absolute;
+height: 333px;
+width: 400px;
+
+margin-top: -334px;
+margin-left: -525px;
+border-radius:15px;
+background-image: url('https://i.gifer.com/IPNp.gif');
+background-size: cover;
+ }
+ .i2{
+    position: absolute;
+height: 333px;
+width: 400px;
+margin-left: 591px;
+
+margin-top: -334px;
+border-radius:15px;
+background-image: url('https://visme.co/blog/wp-content/uploads/2020/02/header-1200.gif');
+ background-size: cover;}
+ #loading{
+  position:fixed;
+  width:100%;
+  height:100vh;
+  background:#fff url('https://i.pinimg.com/originals/78/e8/26/78e826ca1b9351214dfdd5e47f7e2024.gif') no-repeat center;
+    z-index: 99999;
+}
+</style>
+
+	
+	<div class="content-section">
+        <form method="POST">
+            {% csrf_token %}
+            <fieldset class="form-group">
+                <legend class="border-bottom mb-4">Join Today</legend>
+                {{ form|crispy }}
+
+            </fieldset>
+            <div class="form-group">
+                <button class="btn-outline-info" type="submit">Sign Up</button>
+            </div>
+        </form>
+            <div class="border-top pt-3">
+                <small class="text-muted">
+                    Already Have an Account? <a class="ml-2" href="{% url 'login' %}"> Sign In</a>
+                </small>
+
+            </div>
+            <div class="loading">
+    
+            </div>
+    </div>
+    <div class="i1" onload="myf()">
+     
+    </div>
+    <div class="i2">
+
+    </div>
+    
+    <script>
+        var preloader=document.getElementById('loading');
+      function myf(){
+       preloader.style.display= 'none';
+     }
+   
+   </script>
+	
+{% endblock content %}
