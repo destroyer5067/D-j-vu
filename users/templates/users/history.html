@@ -1,0 +1,22 @@
+{%extends 'dejavu/base.html'%}
+{% block title%}Deja-Vu{% endblock %}
+
+{% block body %}
+{% load static %} 
+
+<h1 style="color: rgb(158, 60, 60); text-align: center;">History</h1>
+
+{% if history|length < 1 %}
+        <h3 style="text-align: center; padding-top: 5%;">Nothing to Show</h3>
+{% endif %}
+
+<div class="container">
+{% for i in history reversed %}
+<div class="card mb-3" style="max-width: 940px; padding-top: 0%;">
+    
+  
+  {% endfor %}
+</div>
+</div>
+
+{% endblock %}

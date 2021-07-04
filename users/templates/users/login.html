@@ -1,0 +1,49 @@
+
+{% extends "dejavu/base.html" %}
+{% load crispy_forms_tags %}
+{% load socialaccount %}
+{% providers_media_js %}
+{% block content %}
+<br>
+<br>
+<br>
+<br>
+<div class="row">
+    <div class="col-md-8 mx-auto social-container my-2 order-md-1">
+        <button class="g" >
+            <a href="{% provider_login_url 'google' %}" class="glink"><img src="/media/logo/g.png" class="gimg">&nbsp;&nbsp;&nbsp; Login with Google</a>
+        </button>
+        <button class="f" >
+            <a href = "{% provider_login_url 'facebook' method='oauth2' %}" class="flink"><img src="/media/logo/fb2.png" class="fbimg"> Login with Facebook
+            </a>
+        </button>
+        
+    </div>
+</div>
+
+<h5 class="or">OR</h5>
+
+<div class="content-section">
+    <form method="POST">
+        {% csrf_token %}
+        <fieldset class="form-group">
+            <legend class="border-bottom mb-4">Log In</legend>
+            {{ form|crispy }}
+        </fieldset>
+        <div class="form-group">
+            <button class="btn btn-outline-info" type="submit">Login</button>
+        </div>
+    </form>
+    <div class="border-top pt-3">
+        <small class="text-muted">
+            Need An Account? <a class="ml-2" href="{% url 'register' %}">Sign Up Now</a>
+        </small>
+    </div>
+</div>
+<div class="img1">
+
+</div>
+<div class="img2">
+
+</div>
+{% endblock content %}
